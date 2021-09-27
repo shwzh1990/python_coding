@@ -14,6 +14,9 @@ v1.0 using txt file with each student in ench line info is split by ,
 for instance
 ID:123456,Name:Jack,Gender:male,Chinese:100,Math:100,English:100,Gym:100
 ID:123457,Name:Jackson,Gender:male,Chinese:99,Math:99,English:99,Gym:99
+
+
+hello word
 '''
 
 import os
@@ -211,6 +214,51 @@ def menu_run():
 
 
 
-menu_run()
+#menu_run()
+'''
+1 + 2 ... 1234
 
+first step
+sum = 0 + 1 = 1
+second step
+sum = 2 + 1
 
+1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 ... 100 
+
+'''
+sum = 0
+i = 1
+while i <= 100:
+    sum = i + sum
+    i = i + 1
+
+'''
+Question:
+input your score and print the A/B/C/fail string according to what you type in
+please writing a code: student score is higher and equal than 80 print "A"
+student score is less than 80 but higher than 70 print "B"
+student score is less than or equal then 70 but higher than 60 print "c"
+
+other : print failed.
+
+'''
+'''
+if student_score >= 80:
+    print("A")
+elif student_score < 80 and student_score > 70:
+    print("B")
+elif student_score <= 70 and student_score > 60:
+    print("c")
+else:
+    print("failed")
+
+'''
+student_score = int(input("input your score"))
+if student_score >= 80:
+    print("A")
+elif student_score < 80 and student_score > 70:
+    print("B")
+elif student_score <= 70 and student_score > 60:
+    print("c")
+else:
+    print("failed")
