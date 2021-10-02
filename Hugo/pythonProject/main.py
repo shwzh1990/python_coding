@@ -84,7 +84,7 @@ def add_student_info():
 
 
 
-
+'''
 def remove_student_info():
     ID_list_in_file = []
     os.system('cls')
@@ -120,11 +120,38 @@ def remove_student_info():
             input("The ID is not exist please press Enter to continue..")
             break
 
+'''
+def remove_student_info():
+    with open("student_info.txt", 'r') as fd:
+        student_info_list = fd.readlines()
+    print(student_info_list)
+    while 1:
+        ID_number = input("please type the student id number you want to delete")
+        if ID_number == 'q':
+            with open("student_info.txt", 'w') as fd:
+                fd.writelines(student_info_list)
+            break;
+        '''
+        for loop to check:
+            if element has ID_number
+               delete element
+        
+        '''
+        i = 0
+        for student_info in student_info_list:
+            if ID_number in student_info:
+                delete_student_list = student_info.split(",")
+                for info in delete_student_list:
+                    print(info + '\n')
+                answer = input("are you sure to remove the student info above?(Y/N):")
 
-
-
-
-
+                if answer == 'Y' or answer == 'y':
+                    student_info_list.remove(student_info)
+                    i = 0
+                break
+            i = i + 1
+        if i == len(student_info_list):
+            input("No id found press any key to continue....")
 
 def modify_student_info():
 
