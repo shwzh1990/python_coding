@@ -1,0 +1,93 @@
+'''
+1. how to declare a empty list
+'''
+Joshua_list = []
+print(Joshua_list)
+
+'''
+2. declare an unempty list
+'''
+Joshua_list = [1,2,3,4, "hello world", 1.256, True]
+print(Joshua_list)
+
+'''
+3. how to add element into the list
+'''
+a = "Jack"
+Joshua_list.append(a)
+print(Joshua_list)
+
+
+'''
+4. how to remove an element from the list
+   Pop will pop out the element at index
+'''
+Joshua_list.pop()
+Joshua_list.pop()
+Joshua_list.pop(1)
+Joshua_list.pop(3)
+print(Joshua_list)
+
+'''
+5. the second method to remove an element
+'''
+a = [3,2,"hello",3,5,6]
+a.remove("hello")
+print(a)
+
+'''
+6. reserve
+'''
+a = [1,2,3,4,5]
+a.reverse()
+print(a)
+
+'''
+7. sorted
+'''
+a = [43,541,3,54,2,4654,31,54,414,3,34,5,314,5,42,345,5,3415,4,45]
+b = sorted(a)
+print(b)
+
+'''
+8. clear
+'''
+a = [43,541,3,54,2,4654,31,54,414,3,34,5,314,5,42,345,5,3415,4,45]
+a.clear()
+print(a)
+
+
+'''
+practice
+1. remove all  the odd number(1,3,5,7....) inside the following list
+'''
+'''
+b = []
+a = [75,4325,54,25,454,53,5,42,43,642,35,4325,642,4,325,34,65,6,5,43,54,35,4,5,435,456,4,54,35,45,4]
+for number in a:   #for each number in a list
+    if number % 2 == 0:   #we keep even number
+        b.append(number)
+print(b)
+'''
+a = [75,4325,54,25,454,53,5,42,43,642,35,4325,642,4,325,34,65,6,5,43,54,35,4,5,435,456,4,54,35,45,4]
+b = [number for number in a if number % 2 == 0]
+print(b)
+
+'''
+pratice / homework
+could you use input function to do the code like this?
+
+
+you have a list call total. the total add every string what you type in from the input function and then print out all of 
+the element inside the list.
+
+you will use while 1 list and append, input function print function.
+'''
+
+
+
+
+
+
+
+
