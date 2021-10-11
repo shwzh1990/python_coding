@@ -1,0 +1,6 @@
+'''
+please find out all of the value that can be divide by 2 or divided by 5 or divided by 7 in the following list 
+and then add all values to a new list
+and remove the all the number that can be divide by 21 and 45 in the new list.
+'''
+a = [i for i in range(1,123456)]
