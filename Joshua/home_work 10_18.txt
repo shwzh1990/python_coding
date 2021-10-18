@@ -1,0 +1,15 @@
+'''
+question: 
+indentation and index
+
+could you please remove all the element in the even index in the following list?
+and add all the rest of the number in the new list
+
+
+hint: for instance the list is a =[1,2,3,4,5,6]
+
+for i in range(0,6):
+    if i % 2 != 0:   i is odd number
+        new_list.append(a[i])
+'''
+a = [i for i in range(123,45678)]
