@@ -86,6 +86,17 @@ you will use while 1 list and append, input function print function.
 
 
 
+example:
+a = [1,2,3,4,5,6,7,8]
+b = a
+b[1] = 20
+print(a)
+print(b)
+
+
+del a
+
+
 
 
 
