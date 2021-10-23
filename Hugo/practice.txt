@@ -26,4 +26,4 @@ student score is less than or equal then 70 but higher than 60 print "c"
 
 other : print failed.
 
-'''
+''' 
