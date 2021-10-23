@@ -1,0 +1,64 @@
+mn1.input a number and print out the index(position) of the number in the list.
+  for instance:
+  input 2 and return 3 if the list is [1,324,3543,2,14,3254,1343,4313,41,34,3]
+  return -1 if the number exclude in the list.
+  
+  please copy the code following to generate the list
+  
+  num_list = [i for i in range(1,1000)]
+
+2. give a string: "Jack:100,Lisa:89,Jason:96,Tom:67,Dan:90"
+   write a code: when user input a name then print out the score of this person
+
+   for instance input Lisa returns 89
+
+3. give a list num_list = [i for i in range(1,1000)] input a number and print out all of the number in the list that can be devided by it.
+ 
+
+4. please finish the student score management code 
+
+  
+5. please check the random lib and find out how to use it. please write a code to generate random number by using it
+
+
+
+a=input("please choose a number from 1,324,3543,2,14,3254,1343,4313,41,34,3")
+if a = 1:
+    print("this number is at the first place")
+if a = 2:
+    print("this number is at the fourth place")
+if a = 3:
+    print("this number is at the last place")
+if a = 14:
+    print("this number is at the fifth place")
+if a = 34:
+    print("this number is at the tenth place")
+if a = 41:
+    print("this number is at the ninth place")
+if a = 324:
+    print("this number is at the second place")
+if a = 1343:
+    print("this number is at the seventh place")
+if a = 3254:
+    print("this number is at the sixth place")
+if a = 3543:
+    print("this number is at the third place")
+if a = 4313:
+    print("this number is at the rightth place")
+#####################################
+b=[]
+a="Jack:100,Lisa:89,Jason:96,Tom:67,Dan:90"
+a_list = a.split(',')
+for data in a_list:
+    data_list = data.split(':')
+    b.append(data_list[1])
+b.remove("100")
+print(b)
+c = ",".join(b)
+print(c)
+######################################
+a = input("what number did you choose for divisor?")
+
+for u in range(1000):
+    if int(u) % int(a)== 0:
+        print(u)
