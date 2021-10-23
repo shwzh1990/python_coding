@@ -1,0 +1,4 @@
+
+for i in range(1, 123457)
+if i %7 and %21 and %31
+print(i)
