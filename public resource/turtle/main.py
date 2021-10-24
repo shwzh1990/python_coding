@@ -1,50 +1,114 @@
-
 '''
-practice one:
-just give student a example.
-
+use turtle describe the syntax and gramma of the python
 '''
+
+
 from turtle import *
 import turtle
-def practice_one():
-    color('red', 'yellow')
-    begin_fill()
-    while True:
-        forward(200)
-        left(170)
-        print(pos())
-        if abs(pos()) < 1:
-            break
-    end_fill()
-    done()
-'''
-function:
-1. shape
-2. pensize
-3. speed
-4. forward
-5. backward
-6. setposition   
-7. right
-8. penup
-9. pendown 
-10.home： go back to the 0,0 coordination.
+import argparse
+import time
 
-'''
-def practice_two():
-    tim = turtle.Turtle();
-    tim.color("blue")
-    tim.pensize(3)
-    tim.shape('turtle')
-    tim.speed(1)
-    tim.forward(500)
-    tim.backward(50)
-    tim.right(90)
-    tim.forward(325)
-    tim.left(34)
-    tim.backward(432)
-    tim.penup()
-    tim.setposition(300,300)
+def circle(radiation = 10, fillcolor = 'red'):
+    turtle.color("black", fillcolor)
+    pendown()
+    turtle.color("black", "red")
+    turtle.begin_fill()
+    turtle.circle(radiation)
+    turtle.end_fill()
+    penup()
+
+def square(width=40, length=80,fillcolor = "red"):
+    pendown()
+    turtle.color("black",fillcolor)
+    turtle.begin_fill()
+    turtle.speed(1)
+    turtle.forward(length)
+    turtle.left(90)
+    turtle.backward(width)
+    turtle.right(90)
+    turtle.backward(length)
+    turtle.right(90)
+    turtle.backward(width)
+    turtle.end_fill()
+    penup()
+
+def pen_setpostion(x=-800,y=400):
+    turtle.penup()
+    turtle.setposition(x,y)
+    turtle.pendown()
+
+
+def position_home():
+    pen_setpostion()
+
+def For_loop_test(times,shape, gap = 100, fillcolor = 'red'):
+    turtle.reset()
+    position_home()
+
+    for i in range(1, times+1):
+        if shape == "square":
+            square(fillcolor=fillcolor)
+            turtle.left(90)
+            turtle.forward(gap)
+        elif shape == "circle":
+            circle()
+            turtle.forward(gap)
+    print("for loop test done")
+
+def list_empty():
+    For_loop_test(100,'square',gap = 80,fillcolor='white')
+
+
+list_a = []
+shape_dict = {"square": square, 'circle':circle}
+
+def scan_list():
+    for i in list_a:
+        if i == "square":
+            square()
+            turtle.left(90)
+            turtle.forward(100)
+        elif i == "circle":
+            circle()
+            turtle.forward(100)
+
+def list_append(*args):
+    list_a.extend(args)
+    turtle.reset()
+    position_home()
+    scan_list()
+
+
+def list_pop():
+    if list_a:
+        list_a.pop()
+    turtle.reset()
+    position_home()
+    for i in list_a:
+        if i == "square":
+            square()
+            turtle.left(90)
+            turtle.forward(100)
+        elif i == "circle":
+            circle()
+            turtle.forward(100)
+
+def list_remove(str):
+    list_a.remove(str)
+    scan_list()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

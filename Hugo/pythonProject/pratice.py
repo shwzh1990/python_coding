@@ -161,6 +161,14 @@ for i in range(0,6):
         new_list.append(a[i])
 '''
 a = [i for i in range(123,45678)]
+new_list = []
+for index in range(0,len(a)-1):
+    if index % 2 != 0:
+        new_list.append(a[index])
+
+print("/************************************/")
+print(new_list)
+print("/************************************/")
 
 
 
