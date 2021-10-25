@@ -1,10 +1,4 @@
-'''
-Question:
-input your score and print the A/B/C/fail string according to what you type in
-please writing a code: student score is higher and equal than 80 print "A"
-student score is less than 80 but higher than 70 print "B"
-student score is less than or equal then 70 but higher than 60 print "c"
 
-other : print failed.
-
-'''
+for i in range(1, 123457)
+if i %7 and %21 and %31
+print(i)
