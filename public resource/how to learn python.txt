@@ -1,0 +1,12 @@
+1. how to do coding?
+   (1)seperate the big task to multi-small-tasks
+   (2) combine all the samll task to the big task
+
+2. what is the basic gramma for all programming language?
+   while, for, if, while.
+
+3. basic data structure:
+   list, dict.
+
+
+
