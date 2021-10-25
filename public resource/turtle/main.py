@@ -100,7 +100,8 @@ def list_remove(str):
 
 
 
-
+list_append("square","circle","square", 'circle')
+list_remove("square")
 
 
 

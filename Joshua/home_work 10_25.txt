@@ -1,0 +1,16 @@
+1. write a code, to print out all the string you type in
+   （1） i need some function to allow me to type in the string to the pc
+   (2) after i receive the string i need a function to print it out
+  
+    
+	string = input("please type the string: ")
+	print(string)
+2. what is the type of "ABC", 3.14, 6
+
+3. print out the numbers from 234 to 1000  (use for loop)
+
+4. please type a number from terminal, if the number is odd please string "odd" else print "even"
+
+5. print out "hello world" (use while)
+
+6. give a list num_list = [i for i in range(1,1000)] input a number and print out all of the number in the list that can be devided by it.
