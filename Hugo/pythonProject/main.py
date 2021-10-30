@@ -80,46 +80,6 @@ def add_student_info():
             new_student_msg_str = ','.join(new_student_msg_list) + '\n'
             with open("student_info.txt",'a') as fp:
                 fp.write(new_student_msg_str)
-
-
-
-
-'''
-def remove_student_info():
-    ID_list_in_file = []
-    os.system('cls')
-    with open("student_info.txt",'r') as fp:
-        student_msg_list = fp.readlines()
-        if student_msg_list == []:
-            input("there is no student info in the file. press enter to continue..")
-            return
-    while 1:
-        os.system('cls')
-
-        remove_student_ID = input("Please type the student ID you want to remove:")
-        if remove_student_ID == 'done':
-            with open("student_info.txt",'w') as fp:
-                fp.writelines(student_msg_list)
-                print("write all msg into files please wait...\n")
-                time.sleep(1)
-                break
-        i = 0
-        for element in student_msg_list:
-            i = i + 1
-            if remove_student_ID in element:
-                infos_list = element.split(',')
-                for info in infos_list:
-                    print(info+'\n')
-                status = input("Are you sure you want to delete the following student info(y/n)?")
-                if status == 'y':
-                    student_msg_list.remove(element)
-                    break
-                else:
-                    break
-        if i == len(student_msg_list) and i != 1:
-            input("The ID is not exist please press Enter to continue..")
-            break
-
 '''
 def remove_student_info():
     with open("student_info.txt", 'r') as fd:
@@ -131,12 +91,7 @@ def remove_student_info():
             with open("student_info.txt", 'w') as fd:
                 fd.writelines(student_info_list)
             break;
-        '''
-        for loop to check:
-            if element has ID_number
-               delete element
-        
-        '''
+
         i = 0
         for student_info in student_info_list:
             if ID_number in student_info:
@@ -152,6 +107,44 @@ def remove_student_info():
             i = i + 1
         if i == len(student_info_list):
             input("No id found press any key to continue....")
+'''
+
+'''
+1. check is there any student info in the file 
+2. if has student info then need user to give student ID
+3. check input id with student id 
+4. if match, present remove student id, and ask do you want remove student ID
+5. remove id from list
+6. open file and write new list into the file.
+
+homework:
+1. finish the remove_student_info
+2. fix the invalid id number bug.
+'''
+def remove_student_info():
+    #if there is no student in the file then print out "there is not student info in our file."
+    with open("student_info.txt", 'r') as f:
+        student_list = f.readlines()
+    if student_list == []:                         #if there is no student in our file.
+        print("there is no student in our file")
+        input("press any button to exit")
+    else:                                          #students in our file.
+        #how to remove student info in the list
+        remove_ID = input("please input remove student ID:")
+        for student_info in student_list:
+            if remove_ID in student_info:
+                #use string.split to split the string
+                remove_student_info_list = student_info.split(',')
+                #print(remove_student_info_list)
+                #add '\n' for each string
+                for element in remove_student_info_list:
+                    print(element+'\n')
+                answer = input("Do you want to remove the student info? y/n:")
+                if answer == 'y':
+                    student_list.remove(student_info)
+        # write the new list back to the file.
+        with open("student_info.txt", 'w') as fd:
+            fd.writelines(student_list)
 
 def modify_student_info():
 
@@ -240,6 +233,10 @@ def menu_run():
             menu_dict[select_num][1]()
 
 
-
 menu_run()
+
+
+
+
+
 
