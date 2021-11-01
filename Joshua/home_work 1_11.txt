@@ -1,0 +1,4 @@
+my_string = "geajgrkag,geqrwgrei;Lisa;gujirea,ghrih;Mary;gwujreiger,grewiogurjeoigr;TOM;grweigjrie,geijrgregmrfj;Jim;dksafjiewrghfaskgnerqhng"
+
+fectch out the student name from the string and tell me how many student are there.
+hint: please use split 

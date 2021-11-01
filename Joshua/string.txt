@@ -1,0 +1,1 @@
+string_list = ["www.baidu.com", "shwzh1990@gmail.com","www.google.com","www.my_school.com","jshi@ivent.com",'www.chinacom']
