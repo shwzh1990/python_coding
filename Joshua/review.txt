@@ -1,0 +1,12 @@
+1. what is the type of following data:
+   123, '123', [123], 123.0
+2. how to use input function to input 2 number and add them together?
+3. find out the min number in the following list:
+   [32,45,521,34,43,13,5,6,43,653,53,15,1,312,43,53,3]
+4. find out the max number in the list above
+5. how to add number 31 at the end of the list above?
+6. how to remove number 32 from list above?
+7. can you create a list with all oven number?
+8. can you create a file named "my_review.txt"
+9. can you write "I am a student" into the file and read it out?
+10.can you explain what does the meaning of function?
