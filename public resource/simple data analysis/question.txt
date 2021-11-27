@@ -1,0 +1,12 @@
+1.  who is the rank 1?
+2.  how many students 
+3.  how many female are there
+4.  how many male
+5.  list the student name whoes has the highest score in chinese math gym English seperately
+6.  what is the average score of each subject
+7.  how many students pass chinese, math, gym，English seperately?
+8.  which students score is the lowest?
+9.  which student got the highest score in male
+10. which student got the highest score in female
+11. lowest score student for male
+12. lowest score for female
