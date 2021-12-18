@@ -1,0 +1,6 @@
+1. Could you print out all of the odd number in the range 1 ~ 123435
+2. get the result of sum = 1 + 2 + 3 + ....12345
+3. now here is a string "Math score is 10" could you change the 10 to 60 and make the string like "Math score is 60"
+4. could you establish a txt file called "note book.txt" and write some string into it?
+5. design a function: you can type a password, then the code will compare your password with that in the txt file called password. if it is same then print out "welcome" else print please password is wrong please try again.
+   you need to give user three times trail. if all trials are failed then exit from the code.
