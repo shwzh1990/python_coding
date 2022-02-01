@@ -1,0 +1,37 @@
+{
+    "1235": {
+        "Name": "Merry",
+        "Gender": "female",
+        "Chinese": "100",
+        "Math": "100",
+        "English": "99"
+    },
+    "12345": {
+        "Name": "Merry",
+        "Gender": "female",
+        "Chinese": "100",
+        "Math": "100",
+        "English": "100"
+    },
+    "1234": {
+        "Name": "Jack",
+        "Gender": "male",
+        "Chinese": "67",
+        "Math": "45",
+        "English": "45"
+    },
+    "2022": {
+        "Name": "Jenny",
+        "Gender": "female",
+        "Chinese": "100",
+        "Math": "100",
+        "English": "100"
+    },
+    "45454": {
+        "Name": "Pop",
+        "Gender": "male",
+        "Chinese": "98",
+        "Math": "70",
+        "English": "89"
+    }
+}
