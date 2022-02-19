@@ -1592,12 +1592,34 @@ def check_student_info():
 # b = tuple(a)
 # print(list(b))
 
-import json
-a = {"Hugo":{"programming lan":"c"}}
-result = json.dumps(a, indent=4)
-with open("0.txt","w")as fd:
-    fd.write(result)
-with open("0.txt","r")as fd:
-    info = fd.read()
-result = json.loads(info)
-print(result)
+# import json
+# a = {"Hugo":{"programming lan":"c"}}
+# result = json.dumps(a, indent=4)
+# with open("0.txt","w")as fd:
+#     fd.write(result)
+# with open("0.txt","r")as fd:
+#     info = fd.read()
+# result = json.loads(info)
+# print(result)
+# class student:
+#     def __init__(self,Name,School,Favourite_Subject):
+#         self.Name = Name
+#         self.School = School
+#         self.Favourite_Subject = Favourite_Subject
+# Hugo = student("Hugo","piegon mountain school","Math")
+# print(Hugo.Name)
+# print(Hugo.School)
+# print(Hugo.Favourite_Subject)
+class student:
+    def __init__(self,Name,age,gender):
+        self.Name = Name
+        self.age = age
+        self.gender = gender
+    def prefer(self):
+        if self.Name == "May":
+            print("I prefer Drawing")
+        if self.Name == "Hugo":
+            print("I prefer Math")
+May = student("May",7,"female")
+Hugo = student("Hugo",10,"male")
+May.prefer()
