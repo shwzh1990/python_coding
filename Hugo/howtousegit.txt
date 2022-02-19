@@ -1,0 +1,8 @@
+1. put your file into Hugo/python_coding/Hugo
+2. go back to the Hugo/python_coding
+3. open git bash
+4. type git pull
+5. git status:   to find out which file you want to add and push to the cloud
+6. git add XXXX  XXX: the file you want to add
+7. git commit -m "XXXXX" XXXXX: the word you want to tell me
+8. git push
