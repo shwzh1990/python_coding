@@ -1,0 +1,5 @@
+homework1:
+          As be known, ID should be the unique.When user type ID in to the PC, the code should compare the ID within the file. If the ID exists, the code should print our warning message to allow the urse type the ID again. Could you please do the code please?
+
+Homework 2:
+	in the add student list function, if the student_list is empty, it not necessary to open the file and write empty list inside. Could you do the code if the list is empty then do not have to open the file?

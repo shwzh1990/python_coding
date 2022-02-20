@@ -1,0 +1,17 @@
+the format of student info should inclues: student ID, student name, student gender, student chinese, student math, student english.
+
+ID:0001,name:Joshua,Chinese:100,math:100,english:100
+ID:0002,name:Jack,Chinese:99,math:99,english:99
+
+hint:
+Aim: Implement add student info
+1.Receive all the student info from screen.
+2.combine all of the info into the format above
+3.save string to a txt file. 
+
+
+ID = input("ID:")
+name = input("name:")
+
+student_info = "ID:" + ID + ',' + "name:" + name
+
