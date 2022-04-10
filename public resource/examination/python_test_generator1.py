@@ -44,6 +44,7 @@ Note: \n\
     \'''\n\n\n\n".format(self.name, time.asctime(time.localtime()),self.name) 
 
 def convert_list2str(LIST):
+    LIST = [str(element) for element in LIST]
     return '[' + ','.join(LIST) + ']'
 def question_1(student_exam):
     question_list = [(element) for element in range(random.randint(1,100),random.randint(200,1000))]
@@ -57,7 +58,7 @@ def question_2(student_exam):
     question = "2. get the maximum element in the list for instance in the list [1,2,3,4,5] 5 is the largest number in the list so the answer is 5\n"
     question_list = [random.randint(1,1000) for i in range(1,10000)]
     answer = str(max(question_list))
-    question_list = [str(element) for element in question_list]
+    question_list = [element for element in question_list]
     question_list = convert_list2str(question_list)
     return question,question_list,answer
 
@@ -89,7 +90,7 @@ def answer_3(key):\n\
 
 def question_5(student_exam):
     question = '5. give a random long list and print out first one mid one and last one\n for instance if the list is [1,2,3,4,5,6,7,8,9,10] then the first one is 1 mid one is 6 the last one is 10\n'
-    random_list = [str(random.randint(1,1000)) for i in range(0,1000)]
+    random_list = [random.randint(1,1000) for i in range(0,1000)]
     answer = "first one:{0},mid one: {1}, last one:{2}".format(random_list[0],random_list[len(random_list)//2],random_list[len(random_list)-1])
     random_list = convert_list2str(random_list)
     return question,random_list,answer
@@ -152,7 +153,68 @@ def question_10(student_exam):
     list_2 = '[' + ','.join(list_2) + ']' + '\n'
     return question, list_1 + list_2, answer
 
-Questions = [question_1, question_2, question_3,question_4,question_5,question_6,question_7,question_8,question_9,question_10]
+
+#find out the minimum number in the following list
+def question_11(student_exam):
+    question = '11. Findind out the minum number in the following list\n'
+    question_list = [random.randint(342,4343) for i in range(1,100)]
+    question_list = [str(element) for element in question_list]
+    question_list = convert_list2str(question_list)
+    answer = str(min(question_list))
+    return question, question_list, answer
+#combine two list into one
+def question_12(student_exam):
+    question = '12. Could you please combine following two list together? For instance if the list is a = [1,2,3] and b = [4,5,6] you answer should be c = [1,2,3,4,5,6]\n'
+    list_1 = [i for i in range(1,20)]
+    list_2 = [i for i in range(21,25)]
+    list_1.extend(list_2)
+    answer = 'code : list_1.extend(list_2) and the answer shoudl be' + convert_list2str(list_1)
+    list_1 = convert_list2str(list_1)
+    list_2 = convert_list2str(list_2)
+    return question, list_1 + list_2, answer
+
+
+def question_13(student_exam):
+    question = "13. please remove the first element for the list by following. for instance if the list is a = [1,2,3,4,5]\n"
+    question_list = [random.randint(43,455) for i in range(1,20)]
+    question_list.pop(0)
+    answer = convert_list2str(question_list)
+    question_list = convert_list2str(question_list)
+    return question, question_list, answer
+
+def question_14(student_exam):
+    question = "14. Could you please append the element presenting below to the following list? for instance if the list is [1,2] and the element is 3 then the result should be [1,2,3]\n"
+    question_list = [random.randint(1,4) for i in range(1,3)]
+    element =  random.randint(1,20)
+    answer = "The sample code is list_a.append(element)"
+    question_list = "list_1 = " + convert_list2str(question_list)+'\n' + 'element = ' + str(element)+'\n'
+    return question, question_list, answer
+
+def question_15(student_exam):
+    question = '15. is there any syntax error in the following statement?'
+    question_list = 'a = [1,2,3;4] \
+    del a \
+    print(a)'
+    answer = "wrong, pleaese note the simicolon"
+    return question, question_list, answer
+
+def question_16(student_exam):
+    question = '16. is there any syntax error in the following statement?'
+    question_list = 'if a == 1 \
+    print("hellow")'
+    answer = "syntax wrong there is no colon after if statement"
+    return question, question_list, answer
+
+#def question_17(student_exam):
+#    element = {"int": "".format(random.randint(1,20)), "list": "{}".format([random(1,2443) for i in range(1,10)]), "dict":"{0}".format({"name":"".format(student_exam.name)}), "float": "1.0"}
+#    answer = random.choice(list(element))
+#    question_list = str(element[answer])
+#    question =  "17. what is the type of the thing below?"
+#    return question, question_list, answer
+
+
+    
+Questions = [question_1, question_2, question_3,question_4,question_5,question_6,question_7,question_8,question_9,question_10, question_11,  question_12, question_13, question_14, question_15, question_16 ]
 
 
 def generate_examination(student_exam):
@@ -168,11 +230,11 @@ def generate_examination(student_exam):
         fd.write(student_exam.header + final_answer)
 
 if  __name__ == "__main__":
-    student_name = input("Please input your name: ")
-    student_age =  input("please input your age: ")
-    student_gender = input ("please input your gender: ")
-    student_weight =input ("please input your weight: ")
-    student_exam = student_examination(student_name, student_gender,student_age,student_weight) 
-    #student_exam = student_examination('Jack', 'male',10,80)
+#    student_name = input("Please input your name: ")
+#    student_age =  input("please input your age: ")
+#    student_gender = input ("please input your gender: ")
+#    student_weight =input ("please input your weight: ")
+#    student_exam = student_examination(student_name, student_gender,student_age,student_weight) 
+    student_exam = student_examination('Jack', 'male',10,80)
     generate_examination(student_exam)
     
