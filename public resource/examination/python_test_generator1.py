@@ -136,7 +136,7 @@ def question_9(student_exam):
     anwser = "\nwhile 1:\n\
     name = input('please type your name '')\n\
     if name != {0}:\n\
-        print('student_examorry i do not you')\n\
+        print('student_sorry i do not you')\n\
     else:\n\
         print('hello {0}')\n\
         ".format(student_exam.name, student_exam.name)
@@ -240,10 +240,10 @@ def question_20(student_exam):
     return question,list_1 + '\n' + list_2, answer
 
 
-    
+
 
     
-#Questions = [question_1, question_2, question_3,question_4,question_5,question_6,question_7,question_8,question_9,question_10, question_11,  question_12, question_13, question_14, question_15, question_16, question_17]
+#Questions2 = [question_1, question_2, question_3,question_4,question_5,question_6,question_7,question_8,question_9,question_10, question_11,  question_12, question_13, question_14, question_15, question_16, question_17,question_18,question_19,question_20]
 Questions = { \
     'Entry':[    question_1, \
                   question_2, \
@@ -252,23 +252,25 @@ Questions = { \
                   question_5, \
                   question_6, \
                   question_7, \
-                  question_8, \
-                  question_9, \
-                  question_10, \
+                  question_15, \
+                  question_17, \
+                  question_18, \
    ], \
     "Intermediate":[question_11, \
                      question_12, \
                      question_13, \
                      question_14, \
-                     question_15, \
+                     question_8, \
                     ],\
     "Master": [ question_16, \
-                 question_17, \
-                 question_18, \
+                 question_9, \
+                 question_10, \
                  question_19, \
                  question_20, \
               ] \
 }
+
+
 level_dict = {"1":"Entry","2":"Intermediate","3":"Master"}    
 
 def generate_examination(student_exam, question_for_test):
@@ -300,7 +302,14 @@ if  __name__ == "__main__":
             question_for_test = np.random.choice(Questions[level_dict[level]], size = Amount_of_question, replace = False)
             random.shuffle(question_for_test)
             break
-
+        elif level == 'test':
+            all_question = []
+            for value in Questions.values():
+                all_question.extend(value)
+                print(all_question)
+            question_for_test = np.random.choice(all_question, size=Amount_of_question, replace=False)
+            random.shuffle(question_for_test)
+            break
         else:
             print("please type 1,2,3 to get your level")
 
