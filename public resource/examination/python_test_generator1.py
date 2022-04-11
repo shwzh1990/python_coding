@@ -56,7 +56,11 @@ def question_1(student_exam):
 
 def question_2(student_exam):
     question = "2. get the maximum element in the list for instance in the list [1,2,3,4,5] 5 is the largest number in the list so the answer is 5\n"
+<<<<<<< HEAD
+    question_list = [random.randint(1,3244) for i in range(1,10000)]
+=======
     question_list = [random.randint(1,1000) for i in range(1,10000)]
+>>>>>>> 76c1a5da8493c280e325f334a9aff560e123bfac
     answer = str(max(question_list))
     question_list = [element for element in question_list]
     question_list = convert_list2str(question_list)
@@ -111,7 +115,12 @@ def question_7(student_exam):
 def question_8(student_exam):
     question = "8.(1) please read out the content in the test2.txt\n \
  (2) change the weight from 60 to 65 and change age  to your real age\n \
+<<<<<<< HEAD
+ (3) change weight value to your own weight value\n \
+ (4) save the new data back to the test2.text file\n"
+=======
  (3) change weight value to your own weight value\n"
+>>>>>>> 76c1a5da8493c280e325f334a9aff560e123bfac
 
   #  question_list = '"{0}":{ \
   #         "gender":"male",\
@@ -156,7 +165,11 @@ def question_10(student_exam):
 
 #find out the minimum number in the following list
 def question_11(student_exam):
+<<<<<<< HEAD
+    question = '11. Find out the minum number in the following list\n'
+=======
     question = '11. Findind out the minum number in the following list\n'
+>>>>>>> 76c1a5da8493c280e325f334a9aff560e123bfac
     question_list = [random.randint(342,4343) for i in range(1,100)]
     question_list = [str(element) for element in question_list]
     question_list = convert_list2str(question_list)
@@ -175,7 +188,11 @@ def question_12(student_exam):
 
 
 def question_13(student_exam):
+<<<<<<< HEAD
+    question = "13. please remove the first element for the list by following. for instance if the list is a = [1,2,3,4,5] after remove operation the list should be a = [2,3,4,5]\n"
+=======
     question = "13. please remove the first element for the list by following. for instance if the list is a = [1,2,3,4,5]\n"
+>>>>>>> 76c1a5da8493c280e325f334a9aff560e123bfac
     question_list = [random.randint(43,455) for i in range(1,20)]
     question_list.pop(0)
     answer = convert_list2str(question_list)
@@ -191,14 +208,65 @@ def question_14(student_exam):
     return question, question_list, answer
 
 def question_15(student_exam):
+<<<<<<< HEAD
+    question = '15. is there any syntax error in the following statement?\n'
+    question_list = 'a = [1,2,3;4]\n\
+    del a \n\
+=======
     question = '15. is there any syntax error in the following statement?'
     question_list = 'a = [1,2,3;4] \
     del a \
+>>>>>>> 76c1a5da8493c280e325f334a9aff560e123bfac
     print(a)'
     answer = "wrong, pleaese note the simicolon"
     return question, question_list, answer
 
 def question_16(student_exam):
+<<<<<<< HEAD
+    question = '16. is there any syntax error in the following statement?\n'
+    question_list = 'if a == 1\n \
+    print("hello")'
+    answer = "syntax wrong there is no colon after if statement"
+    return question, question_list, answer
+
+def question_17(student_exam):
+    element = {"int": "{0}".format(random.randint(1,20)), "list": "{0}".format([random.randint(1,2443) for i in range(1,10)]),"dict":"{0}".format({"name":"{0}".format(student_exam.name)}), "float": "1.0"}
+    answer = random.choice(list(element))
+    question_list = str(element[answer])
+    question =  "17. what is the type of the thing below?\n"
+    return question, question_list, answer
+
+def question_18(student_exam):
+    question = "18. Could you print out the average value of following list?\n"
+    question_list = [random.randint(43,434) for i in range(1,random.randint(23,45))]
+    answer = sum(question_list) / len(question_list)
+    question_list = convert_list2str(question_list)
+    answer = str(answer)
+    return question, question_list, answer
+def question_19(student_exam):
+    question = "19. could you remove all of the duplicate value in the following list?\n"
+    question_list = [random.randint(43,434) for i in range(1,random.randint(23,42))]
+    answer = convert_list2str(list(set(question_list)))
+    question_list = convert_list2str(question_list)
+    return question, question_list, answer
+def my_minus(list_1, list_2):
+    return list_1 - list_2
+def question_20(student_exam):
+    question = "20. Could you please minus each element one by one in the following lists?\n"
+    list_1 = [random.randint(43,5356) for i in range(1,343)]
+    list_2 = [random.randint(43,5356) for i in range(1,343)]
+    answer = map(my_minus,list_1, list_2)
+    list_1 = convert_list2str(list_1)
+    list_2 = convert_list2str(list_2)
+    return question,list1 + '\n' + list_2, answer
+
+
+    
+
+    
+Questions = [question_1, question_2, question_3,question_4,question_5,question_6,question_7,question_8,question_9,question_10, question_11,  question_12, question_13, question_14, question_15, question_16, question_17]
+
+=======
     question = '16. is there any syntax error in the following statement?'
     question_list = 'if a == 1 \
     print("hellow")'
@@ -215,6 +283,7 @@ def question_16(student_exam):
 
     
 Questions = [question_1, question_2, question_3,question_4,question_5,question_6,question_7,question_8,question_9,question_10, question_11,  question_12, question_13, question_14, question_15, question_16 ]
+>>>>>>> 76c1a5da8493c280e325f334a9aff560e123bfac
 
 
 def generate_examination(student_exam):
