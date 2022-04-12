@@ -238,9 +238,16 @@ def question_20(student_exam):
     list_1 = convert_list2str(list_1)
     list_2 = convert_list2str(list_2)
     return question,list_1 + '\n' + list_2, answer
-
-
-
+def question_21(student_exam):
+    question = " write code change all character in the following string from lower case to upper case\n"
+    question_list = ("{0}".format(random.choices(string.ascii_lowercase, k=1)[0])) * 100
+    answer = question_list.upper()
+    return question, question_list,answer
+def question_22(student_exam):
+    question = " write code change all character in the following string from upper case to lower case\n"
+    question_list = ("{0}".format(random.choices(string.ascii_uppercase, k=1)[0])) * 100
+    answer = question_list.upper()
+    return question,question_list,answer
 
     
 #Questions2 = [question_1, question_2, question_3,question_4,question_5,question_6,question_7,question_8,question_9,question_10, question_11,  question_12, question_13, question_14, question_15, question_16, question_17,question_18,question_19,question_20]
@@ -261,6 +268,8 @@ Questions = { \
                      question_13, \
                      question_14, \
                      question_8, \
+                     question_21, \
+                     question_22 
                     ],\
     "Master": [ question_16, \
                  question_9, \
