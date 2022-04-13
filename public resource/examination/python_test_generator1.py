@@ -50,8 +50,7 @@ def convert_list2str(LIST):
 def question_1(student_exam):
     question_list = [(element) for element in range(random.randint(1,100),random.randint(200,1000))]
     answer = str(sum(question_list))
-    question_list = [str(element) for element in range(random.randint(1,100),random.randint(200,1000))]
-    question_list = '[' + ','.join(question_list) + ']'
+    question_list = convert_list2str(question_list)
     question = " sum all of the element int the list presenting below:"
     return question,question_list,answer
 
