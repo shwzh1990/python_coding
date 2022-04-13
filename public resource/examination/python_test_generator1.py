@@ -159,9 +159,9 @@ def question_10(student_exam):
 def question_11(student_exam):
     question = ' Findind out the minum number in the following list\n'
     question_list = [random.randint(342,4343) for i in range(1,100)]
-    question_list = [str(element) for element in question_list]
-    question_list = convert_list2str(question_list)
     answer = str(min(question_list))
+    question_list = convert_list2str(question_list)
+    
     return question, question_list, answer
 #combine two list into one
 def question_12(student_exam):
