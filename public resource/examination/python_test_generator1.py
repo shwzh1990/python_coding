@@ -178,9 +178,10 @@ def question_12(student_exam):
 def question_13(student_exam):
     question = " please remove the first element for the list by following. for instance if the list is a = [1,2,3,4,5]\n"
     question_list = [random.randint(43,455) for i in range(1,20)]
+    previous_question = question_list
     question_list.pop(0)
     answer = convert_list2str(question_list)
-    question_list = convert_list2str(question_list)
+    question_list = convert_list2str(previous_question)
     return question, question_list, answer
 
 def question_14(student_exam):
