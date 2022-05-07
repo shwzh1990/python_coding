@@ -50,8 +50,7 @@ def convert_list2str(LIST):
 def question_1(student_exam):
     question_list = [(element) for element in range(random.randint(1,100),random.randint(200,1000))]
     answer = str(sum(question_list))
-    question_list = [str(element) for element in range(random.randint(1,100),random.randint(200,1000))]
-    question_list = '[' + ','.join(question_list) + ']'
+    question_list = convert_list2str(question_list)
     question = " sum all of the element int the list presenting below:"
     return question,question_list,answer
 
@@ -160,9 +159,9 @@ def question_10(student_exam):
 def question_11(student_exam):
     question = ' Findind out the minum number in the following list\n'
     question_list = [random.randint(342,4343) for i in range(1,100)]
-    question_list = [str(element) for element in question_list]
-    question_list = convert_list2str(question_list)
     answer = str(min(question_list))
+    question_list = convert_list2str(question_list)
+    
     return question, question_list, answer
 #combine two list into one
 def question_12(student_exam):
@@ -179,9 +178,10 @@ def question_12(student_exam):
 def question_13(student_exam):
     question = " please remove the first element for the list by following. for instance if the list is a = [1,2,3,4,5]\n"
     question_list = [random.randint(43,455) for i in range(1,20)]
+    previous_question = question_list
     question_list.pop(0)
     answer = convert_list2str(question_list)
-    question_list = convert_list2str(question_list)
+    question_list = convert_list2str(previous_question)
     return question, question_list, answer
 
 def question_14(student_exam):
