@@ -1,0 +1,24 @@
+#dictionary:
+
+#how to create a dictionary:
+student_dict = {}     #build a new empty dictionary
+#how to create a dictionary with content?
+student_dict = {"name":"Jack","Chinese":100}
+#how to get the value inside the dictionary?
+chinese_score = student_dict["Chinese"]
+#how to del a value inside dictionary?
+del student_dict["Chinese"]     #student_dict = {"name":"Jack"}
+#how to iterate (loop) the keys in the dictionary
+for key in student_dict.keys():
+    print(key)
+
+#how to iterate(loop) the value in the dictionary?
+for value in student_dict.values():
+    print(value)
+
+#how to iterate(loop) both value and keys in the dictionary?
+for key,value in student_dict.items():
+    print(key)
+    print(value)
+
+print(student_dict)
