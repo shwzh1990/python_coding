@@ -1,27 +1,35 @@
 import re
-
-with open("CD_all.txt",'r',encoding='utf-8') as fd:
+import random
+with open("pakistan_all.txt",'r',encoding='utf-8') as fd:
     data = fd.read()
+a = re.findall(r"Document A........................", data, re.M)
+a = re.split(r"Document A........................", data)
+a.pop()
 
-a = re.findall(r"Document CHNDLY...................", data, re.M)
+new_article = []
 
-#print(len(a))
-#article = re.split(r"Document CHNDLY...................", data)
-#print(len(article))
-#import re
-##? ab? =>a, ab
-##+ ab+ => ab abbb abbbbbb
-##. 
-##\w any alphabet, character==
-##\W 
-##\s
-##\S
-##^  beginning of the string
-##[1-5]
-#str_sample = "ab,abbhjk, a5,a3,a6,abbcb, abbbjkbbbbbbbbb,a*,a#$%,a!$%$^$%#,a{,a ,"
-#result = re.findall("(a[1-5]),",str_sample)
-#print(result)
-str_sampe = "abdkljfadskl23fjfdkljklfjd45fgjreaklgj56dksjfgklfejr78fjeiejwklflk90fjakldsfjkdl"
-result_list = re.split(r"\d\d",str_sampe,re.ASCII)
-print(result_list)
+for article in a:
+    article = article.strip('\n')
+    article = article.strip()
+    new_article.append(article)
+del a
+
+
+def func():
+    date_list = []
+    for article in new_article:
+        temp_article_list = article.split("\n")
+        if temp_article_list[0] == "Editorial":
+            date_list.append(temp_article_list[4])  
+        date_list.append(temp_article_list[4]) 
+         
+    print(date_list) 
+    
+
+#new_article.sort(key=func)
+func()
+
+'''
+   1. find out all of the date scentence and doing the sorting by using the func in the sort function
+'''
 

@@ -1,0 +1,21 @@
+1. print function: 
+   print function can print out all of the info in the ()
+2. variable:
+   A space can save data in. Also can be named randomly.
+3. data type
+4. data type in python for now: integer, float,double, string, 
+   integer: the number without dot
+   float/double: the number with dot
+   string: the data with Quotation mark 
+string can add with string
+integer and add with both integer and float
+5. // get rid of the value after the dot just keep the integer part
+6. ** represent power()
+7. list: school bag put everything inside
+question1: how can i have an empty list?
+Charles = []
+question2: how can i put someting into the empty
+question3: if i have a list. how can i review the element inside it?
+the index in the list starts from 0 to the length of the list minus 1
+
+
