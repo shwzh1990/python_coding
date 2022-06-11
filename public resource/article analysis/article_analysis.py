@@ -15,21 +15,23 @@ for article in a:
 del a
 
 
-def func():
-    date_list = []
-    for article in new_article:
-        temp_article_list = article.split("\n")
-        if temp_article_list[0] == "Editorial":
-            date_list.append(temp_article_list[4])  
-        date_list.append(temp_article_list[4]) 
-         
-    print(date_list) 
+def func(e):
+    date_list = []          
+    article_list = e.split("\n")
+    for num,content in enumerate(article_list):
+        if " words" in content:
+            date_list.append(article_list[num+1])
+            break
+    Month_map = {"January":0,"February":31,"March":31+28,"April":31+28+31,"May":31+28+31+30,"June":31+28+31+30+31,"July":31+28+31+30+31+30,"August":31+28+31+30+31+30+31,"September":31+28+31+30+31+30+31+31,"October":31+28+31+30+31+30+31+31+30,"November":31+28+31+30+31+30+31+31+30+31,"December":31+28+31+30+31+30+31+31+30+31+30}  
+    for date in date_list:
+        date_list = date.split(" ")
+    return int(date_list[0]) + int(Month_map[date_list[1]]) + int(date_list[2])*356    
     
+    
+    
+#print(func())
+new_article.sort(key=func)
 
-#new_article.sort(key=func)
-func()
-
-'''
-   1. find out all of the date scentence and doing the sorting by using the func in the sort function
-'''
+with open("pakistan_all_time.txt", 'w', encoding="utf-8") as fd:
+    fd.writelines(new_article)
 
