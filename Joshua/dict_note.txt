@@ -1,0 +1,23 @@
+1. how to build a new dict?
+new_dict = {}
+2. in the dictionary the relationship is always key:value  (key should be a string or integer/float )
+3. why we have dictionary
+save search time
+4. how to get the value in the dict?
+dictionary[key] => value
+5. how can you modify the value?
+
+dictionary[key]=new value
+
+6. how can you remove a dictionary?
+del dictionary[key]
+if you want to remove all the value inside the dictionary you can do :
+del dictionary
+7. how to use for loop to check the dictionary:
+(1).if you just want to know the value inside the whole dictionary:
+    dictionary.values() or use for loop
+(2). if you want to get the key inside the dictionary:
+     dictionary.keys() or for key in dictionary.keys()
+(3). if youn want to get both:
+      for key, value in new_dict.items():
+
