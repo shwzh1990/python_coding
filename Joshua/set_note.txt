@@ -1,0 +1,11 @@
+Set:
+it is a special list.
+Set do not have duplicate element inside.
+
+how to get the value in both set?
+a & b
+how to get the value which exclusive in another set?
+a ^ b
+how to get the value which not in another set?
+a - b / b - a
+
