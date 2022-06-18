@@ -1,0 +1,46 @@
+1. all of the result received from input is str
+2. int(XXX) can convert a str to a int
+3. str(1234) => "1234"
+
+Tool:
+1. list   a = [], a.append(1)
+
+2. print() => print everything
+
+3. input() => can receive the msg from keyboard
+
+4. int(xxx) => convert xx to int
+
+5 str(xxx) => convert xxx to str
+
+project:
+1. could you designed a add calculator?
+print the add result after type two number in.
+you can use two input
+
+num1 = int( input("please add first number") )
+num2 = int( input("please add second number") )
+print(num1 + num2)
+
+project:
+
+use input to send data to your computer and use a list to receive it for 10 times.
+
+
+
+loop:
+while 1 :
+    XXXXXX
+
+if XX is true then run the code follow:
+
+i  = 10
+while i:
+    XXXXXX
+    i = i - 1
+print(i)
+
+msg = input("password")
+if msg == "12345":
+   print("success!")
+
