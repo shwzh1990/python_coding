@@ -1,1 +1,28 @@
-{"1": {"Koha": "present", "aroha": "love", "awa": "river", "haka": "generic term for Mori dance", "hikoi": "walk", "hui": "meeting", "iti": "small", "kai": "food", "koha": "gift"}, "2": {"hangi": "traditional feast prepared in eath oven", "kiwi": "large native bird", "mahi": "work or activity", "mana": "prestige reputation"}, "3": {"hapu": "clan,sub-tribe to be born", "iwi": "tribe", "karakia": "prayer", "kaumatua": "elder", "kauri": "large native conifer", "kohanga reo": "language nest"}}
+{
+    "1": {
+        "Koha": "present",
+        "aroha": "love",
+        "awa": "river",
+        "haka": "generic term for Mori dance",
+        "hikoi": "walk",
+        "hui": "meeting",
+        "iti": "small",
+        "kai": "food",
+        "koha": "gift"
+    },
+    "2": {
+        "hangi": "traditional feast prepared in eath oven",
+        "kiwi": "large native bird",
+        "mahi": "work or activity",
+        "mana": "prestige reputation",
+        "ihi": "power"
+    },
+    "3": {
+        "hapu": "clan,sub-tribe to be born",
+        "iwi": "tribe",
+        "karakia": "prayer",
+        "kaumatua": "elder",
+        "kauri": "large native conifer",
+        "kohanga reo": "language nest"
+    }
+}

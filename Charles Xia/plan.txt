@@ -1,0 +1,12 @@
+1. make a menu
+   1. multi-select function
+   2. Word answer
+function tool:
+1. print
+2. input
+3. the method which can run the function when user finish the selection
+
+
+
+2. how to implement the multi-select function
+3. how to implement the word answer
