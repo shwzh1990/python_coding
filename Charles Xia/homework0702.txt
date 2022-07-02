@@ -1,0 +1,2 @@
+build a list from 123 to 23450
+find out the first 7 number can be fully devided by 13
