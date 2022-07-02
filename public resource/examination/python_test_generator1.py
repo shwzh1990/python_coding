@@ -23,7 +23,7 @@ import json
 import string
 import numpy as np
 
-Amount_of_question = 5
+Amount_of_question = 82,3,4,582,3,4,582,3,4,58
 class student_examination:
 
     def __init__(self,name, gender, age, weight):
@@ -63,7 +63,7 @@ def question_2(student_exam):
     return question,question_list,answer
 
 def question_3(student_exam):
-    question = " Fetch all of the even number in the following string and save them in the list please print them out\n"
+    question = " Fetch all of the odd number in the following string and save them in the list please print them out\n"
     question_list = [(random.randint(1,1000)) for i in range(1,10000)]
     answer = [str(odd_number) for odd_number in question_list if odd_number % 2 == 1]
     question_list = [str(element) for element in question_list]
@@ -176,7 +176,7 @@ def question_12(student_exam):
 
 
 def question_13(student_exam):
-    question = " please remove the first element for the list by following. for instance if the list is a = [1,2,3,4,5]\n"
+    question = " please remove the first element for the list by following. for instance if the list is a = [1,2,3,4,5]\n then the answer is a = [2,3,4,5]"
     question_list = [random.randint(43,455) for i in range(1,20)]
     previous_question = question_list
     question_list.pop(0)
@@ -248,7 +248,65 @@ def question_22(student_exam):
     question_list = ("{0}".format(random.choices(string.ascii_uppercase, k=1)[0])) * 100
     answer = question_list.upper()
     return question,question_list,answer
+def question_23(student_exam):
+    question = "Could you please find out all the word 'info' in the following string there is no case sensitive"
+    question_list = "[infomation, info INFO, infomative Info iNfo iNFO iNfOmative InFomation andinfo]"
+    answer = "you need to use regular expression to do it:\n re.findall('\binfo\b',str,flag=re.I)\n [info,INFO, Info, INFO]"
+    return question,question_list,answer
+def question_24(student_exam):
+    question = "Could you sort the following list by the length of each element?"
+    question_list = ["fdasf","feqff","feqwfag","hterr","rqdcc","qfergr4gewgergegr","cxvbvdgfbfbgferbdf","dfeqegreh45tbebtr","r34rfet4537resffy"] * 100
+    question_list = convert_list2str(question_list)
+    answer = "Hint: question_list.sort(func=myfunc) \n def myfunc(e):\n    return(len(e))"
+    return question,question_list,answer
+def question_25(student_exam):
+    question = "Could you sort the following list by the date?"
+    question_list = []
+    for i in range(1,100):
+        question_str = "fdskjfjdsakjfkadsjfklsd,{} {} {}".format(random.randint(1,31),random.randint(3,12),random.randint(1990,2099)) 
+    question_list.append(question_str)
+    question_list = convert_list2str(question_list)
+    answer = "Hint: question_list.sort(func=myfunc) \n def myfunc(e):\n   here you need to covert your date to number and return"
+    return question,question_list,answer
+def question_26(student_exam):
+    question = "Could you generate a random list with random  int element and random list length?"
+    question_list = ""
+    answer = "import random\n [random.randint(1,10000) for i in range(1,random.randint(1,100))]"
+    return question,question_list,answer
+def question_27(student_exam):
+    question = "Could you please find the second max number in the following list?"
+    question_list = [random.randint(1,100) for i in range(1,random.randint(1,100))]
+    question_list = convert_list2str(question_list)
+    answer = "question_list.sort()[-2]"
+def question_28(student_exam):
+    question = "Could you find out the second min number in the following list?"
+    question_list = [random.randint(1,100) for i in range(1,random.randint(1,100))]
+    question_list = convert_list2str(question_list)
+    answer = "question_list.sort()[1]"
+def question_29(student_exam):
+    question = " Fetch all of the even number in the following string and save them in the list please print them out\n"
+    question_list = [(random.randint(1,1000)) for i in range(1,10000)]
+    answer = [str(even_number) for even_number in question_list if even_number % 2 == 0]
+    question_list = [str(element) for element in question_list]
+    question_3_str = '%'.join(question_list)
+    answer = '[' + ','.join(answer) + ']'
+    return question, question_3_str,answer
 
+def question_30(student_exam):
+    question = " Fetch all of the  number can be fully divide by 3 in the following string and save them in the list please print them out\n"
+    question_list = [(random.randint(1,1000)) for i in range(1,10000)]
+    answer = [str(even_number) for even_number in question_list if even_number % 3 == 0]
+    question_list = [str(element) for element in question_list]
+    question_3_str = '%'.join(question_list)
+    answer = '[' + ','.join(answer) + ']'
+    return question, question_3_str,answer
+
+              
+    
+    
+              
+    
+    
     
 #Questions2 = [question_1, question_2, question_3,question_4,question_5,question_6,question_7,question_8,question_9,question_10, question_11,  question_12, question_13, question_14, question_15, question_16, question_17,question_18,question_19,question_20]
 Questions = { \
@@ -262,6 +320,9 @@ Questions = { \
                   question_15, \
                   question_17, \
                   question_18, \
+                  question_27,  \
+                  question_30,  \
+                  question_29 \
    ], \
     "Intermediate":[question_11, \
                      question_12, \
@@ -269,13 +330,17 @@ Questions = { \
                      question_14, \
                      question_8, \
                      question_21, \
-                     question_22 
+                     question_22,\
+                     question_23, \
+                     question_24 \
                     ],\
     "Master": [ question_16, \
                  question_9, \
                  question_10, \
                  question_19, \
                  question_20, \
+                 question_25, \
+                 question_26  \
               ] \
 }
 
