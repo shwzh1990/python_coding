@@ -301,7 +301,55 @@ def question_30(student_exam):
     answer = '[' + ','.join(answer) + ']'
     return question, question_3_str,answer
 
+def question_31(student_exam):
+    question = "Can you sort the following list by the 5th character in each element?"
+    question_list = ["fjkasdjfkwqlf","hwgreqeawqljgierqgh","ortejhgot","grewjigjriowegkweng","grjeoijqopjgfwqeogner","gjorgejr5gabfjad"]
+    answer = "def myfunc(e):\n    return e[4]\n question_list.sort(key=myfunc)"
+    question_list = convert_list2str(question_list)
+    return question, question_list, answer
+
+def question_32(student_exam):
+    question = "Can you remove the all of the element in the dictionary?"
+    question_list = "my_dict = {'a': {}, 'b':{}, 'c':{}, 'faf':{}}".format(random.randint(1,1000),random.randint(1,1000), random.randint(1,1000),random.randint(1,1000))
+    answer = "del my_dict"
+    return question, question_list, answer
+    
+def question_33(stuent_exam):
+    question = "Can you sort the following list by the numbers in the []?"
+    question_list = ["fasdkfjkdsa [{}]".format(random.randint(332,43452)),"afafqev [{}]".format(random.randint(32,4763)),"brwebgrewe [{}]".format(random.randint(32,43433)),"vaerfvrehre [{}]".format(random.randint(32,4133)),"bsvaa [{}]".format(random.randint(32,243254))]
+    answer = "def myfunc(e):\n    msg = e.split(" ")[1]\n    return msg[1]"
+    question_list = convert_list2str(question_list)
+    return question, question_list, answer
+def question_34(student_exam):
+    question = "Could you find out all all word start with pre?"
+    question_list = "previous apple preoccupy pear preread prepare and also get the sample pre-skill"
+    answer = "re.findall('(pre\w+)',question_list)" 
+    return question, question_list, answer
+
+def question_35(student_exam):
+    question = "Could you get the middle value in the follow list? for instance a = [1,2,3,4,5] then 3 is the middle value"
+    question_list =  [random.randint(1,45) for i in range(1,1000)]
+    question_list = convert_list2str(question_list)
+    answer = "question_list[len(question_list)//2]"
+    return question, question_list, answer
               
+def question_36(student_exam):
+    question = "Could you combine following two list into one? for intance [1,2,3]  [4,5,6] => [1,2,3,4,5,6]"    
+    question_list = "a = [345,3,4325,,432] b = [343,6534,7,87,3654,654]"
+    answer = "a.extend(b)"
+    return question, question_list, answer
+
+def question_37(student_exam):
+    question = "Could you get the result of 1 * 2 * 3 * .... 100?"
+    question_list = ""
+    answer = "result = 1\nfor i in range(1,101):\n    result = result * i"
+    return question, question_list, answer
+
+def question_38(student_exam):
+    question = "Could you generate a list with all even number in range(1,1000)?"
+    question_list = ""
+    answer = "[i for i in range(1,1001) if i % 2 == 0] "
+    return question, question_list, answer
     
     
               
@@ -322,7 +370,9 @@ Questions = { \
                   question_18, \
                   question_27,  \
                   question_30,  \
-                  question_29 \
+                  question_29, \
+                  question_32, \
+                  question_36 \
    ], \
     "Intermediate":[question_11, \
                      question_12, \
@@ -332,7 +382,8 @@ Questions = { \
                      question_21, \
                      question_22,\
                      question_23, \
-                     question_24 \
+                     question_24, \
+                     question_35 \ 
                     ],\
     "Master": [ question_16, \
                  question_9, \
@@ -340,7 +391,10 @@ Questions = { \
                  question_19, \
                  question_20, \
                  question_25, \
-                 question_26  \
+                 question_26,  \
+                 question_31, \
+                 question_33, \
+                 quesntion_34 \
               ] \
 }
 
