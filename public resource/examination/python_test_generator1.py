@@ -23,7 +23,7 @@ import json
 import string
 import numpy as np
 
-Amount_of_question = 82,3,4,582,3,4,582,3,4,58
+Amount_of_question = 8 
 class student_examination:
 
     def __init__(self,name, gender, age, weight):
@@ -150,7 +150,7 @@ def question_10(student_exam):
     list_2 = [str(element) for element in list_2]
     
     answer = '[' + ','.join(answer) + ']' + '\n'
-    list_1 = '[' + ','.join(list_1) + ']' + '\n'
+    list_1 = '[' + ','.join(list_1) + ']' + '\n\n\n'
     list_2 = '[' + ','.join(list_2) + ']' + '\n'
     return question, list_1 + list_2, answer
 
@@ -263,8 +263,8 @@ def question_25(student_exam):
     question = "Could you sort the following list by the date?"
     question_list = []
     for i in range(1,100):
-        question_str = "fdskjfjdsakjfkadsjfklsd,{} {} {}".format(random.randint(1,31),random.randint(3,12),random.randint(1990,2099)) 
-    question_list.append(question_str)
+        question_str = "'fdskjfjdsakjfkadsjfklsd,{} {} {}'".format(random.randint(1,31),random.randint(3,12),random.randint(1990,2099)) 
+        question_list.append(question_str)
     question_list = convert_list2str(question_list)
     answer = "Hint: question_list.sort(func=myfunc) \n def myfunc(e):\n   here you need to covert your date to number and return"
     return question,question_list,answer
@@ -322,7 +322,7 @@ def question_33(stuent_exam):
     return question, question_list, answer
 def question_34(student_exam):
     question = "Could you find out all all word start with pre?"
-    question_list = "previous apple preoccupy pear preread prepare and also get the sample pre-skill"
+    question_list = "[previous apple preoccupy pear preread prepare and also get the sample pre-skill]"
     answer = "re.findall('(pre\w+)',question_list)" 
     return question, question_list, answer
 
@@ -374,7 +374,7 @@ Questions = { \
                   question_32, \
                   question_36 \
    ], \
-    "Intermediate":[question_11, \
+    "Intermediate": [ question_11, \
                      question_12, \
                      question_13, \
                      question_14, \
@@ -383,8 +383,7 @@ Questions = { \
                      question_22,\
                      question_23, \
                      question_24, \
-                     question_35 \ 
-                    ],\
+                     question_35 ],\
     "Master": [ question_16, \
                  question_9, \
                  question_10, \
@@ -394,7 +393,7 @@ Questions = { \
                  question_26,  \
                  question_31, \
                  question_33, \
-                 quesntion_34 \
+                 question_34 \
               ] \
 }
 
