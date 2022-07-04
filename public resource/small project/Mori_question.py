@@ -2,7 +2,7 @@ import json
 import numpy as np
 import random
 import os 
-questions_amount = 1
+questions_amount = 5
 
 
 def level():
@@ -95,6 +95,7 @@ def Word_Answer():
                 count  = count + 100/questions_amount
             else:
                 print("The correct answer is {}".format(question_dict[question]))
+            current_question_num  = current_question_num + 1
         print("Your final score is {}".format(count))
         break
         
