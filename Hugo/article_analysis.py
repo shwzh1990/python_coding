@@ -64,11 +64,11 @@ for i in range(f):
     result.append(int(c) + v[y] + int(x))
 
 new_article.sort(key=myfunc)
-
+###################################################################
 #questions that I am gonna ask the teacher:
 #1.are we gonna past anything into e?
 #2.how to run this function?
-#3.how to know check it
+#3.how to know check it?
 
 
     # result.sort()
@@ -99,4 +99,3 @@ new_article.sort(key=myfunc)
 # names.sort(key = myfunc)
 # print(names)
 # myfunc()
-#This is a program
