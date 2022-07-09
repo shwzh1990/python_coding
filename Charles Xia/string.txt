@@ -1,0 +1,17 @@
+1.
+  a = "hello world"
+  a = ['h','e','l','l','o',' ','w','o','r','l','d']
+2. len:
+   calculate the length of the string / list / set ....
+3.string function.
+  string.split("xxx") split by xxxx and return =>list
+  string.replace(old,new,count=-1) => copy a new string with replacement
+  "xxx".join(list) => combine list to string with xxx
+
+4. string opeartion:
+   "Tom" + "loves" + "cat"
+
+5. format:
+>>> height = 1.71
+>>> score = 98
+>>> print("Lisa's height is {0} and her chinese score is {1}".format(height,score))
