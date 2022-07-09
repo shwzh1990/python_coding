@@ -9,66 +9,31 @@ a.pop()
 f = len(a)
 
 new_article = []
-for article in a:
-    article = article.strip('\n')
-    article = article.strip()
-    new_article.append(article)
+for articles in a:
+    articles = articles.strip("\n")
+    articles = articles.strip()
+    new_article.append(articles)
 del a
-# print(new_article[])
 
-def get_article_date():
-    i = 0
-    d = []
-    for i in range(f):
-        z = new_article[i].split("\n")
-        for b,element in enumerate(z):
-            if "words" in element:
-                d.append(z[b+1])
-                break
-get_article_date()
-
-def myfunc(e):
-    return e
-result = []
-c = 0
-y = 0
-i = 0
-d = []
-for i in range(f):
-    z = d[i].split("\n")
-    for b,element in enumerate(z):
-        if "words" in element:
-            d.append(z[b+1])
+def func(e):
+    date_list = []
+    article_list = e.split("\n")
+    for a,content in enumerate(article_list):
+        if word in content:
+            date_list.append(article_list[a+1])
             break
-i = 0
-for i in range(f):
-    s = d[i].split()
-    c = s[0]
-    y = s[1]
-    p = s[2]
-    v = {
-        "January":0,
-        "February":31,
-        "March":59,
-        "April":90,
-        "May":120,
-        "June":151,
-        "July":181,
-        "August":212,
-        "September":243,
-        "October":273,
-        "November":304,
-        "December":334
-        }
-    x = int(p) * 365
-    result.append(int(c) + v[y] + int(x))
-
-new_article.sort(key=myfunc)
+    Months = {"January":0,"February":31,"March":31 + 28,"April":31 + 28 + 31,"May":31 + 28 + 31 + 30,"June":31 + 28 + 31 + 30 + 31, "July":31 + 28 + 31 + 30 + 31 + 30, "August":31 + 28 + 31 + 30 + 31 + 30 + 31, "September":31 + 28 + 31 + 30 + 31 + 30 + 31 + 31, "October":31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30,"November":31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31, "December":31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30}
+    for dates in date_list:
+        b = dates.split(" ")
+    return int(b[0]) + int(Months[b[1]]) + int(b[2])*365
+new_article.sort(key = func)
+with open("pakistan_all_time.txt","w" , encoding="utf-8")as fd:
+    fd.writelines(new_article)
 ###################################################################
 #questions that I am gonna ask the teacher:
 #1.are we gonna past anything into e?
 #2.how to run this function?
-#3.how to know check it?
+#3.how to know thst it check it?
 
 
     # result.sort()
