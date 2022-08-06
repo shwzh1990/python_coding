@@ -421,6 +421,10 @@ def question_49(student_exam):
     return question, question_list, answer
 def question_50(student_exam):
     question = "Make a small project. Read out all the data from question50.txt and then 1.append with the all odd number in range 1 ~ 100 2. remove all of the element which can be divide by 7, extend all value from (200~1000) and then save back to the question50.txt\n"
+    my_list = [i for i in range(200,301)]
+    my_list = convert_list2str(my_list)
+    with open("question50.txt", 'w', encoding='utf-8') as fd:
+        fd.writelines(my_list)
     answer = "No answer will provide\n"
     question_list = ""
     return question, question_list, answer
