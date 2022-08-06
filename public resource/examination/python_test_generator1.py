@@ -302,7 +302,7 @@ def question_30(student_exam):
     return question, question_3_str,answer
 
 def question_31(student_exam):
-    question = "Can you sort the following list by the 5th character in each element?"
+    question = "Can you sort the following list by the 5th character in each element?\n"
     question_list = ["fjkasdjfkwqlf","hwgreqeawqljgierqgh","ortejhgot","grewjigjriowegkweng","grjeoijqopjgfwqeogner","gjorgejr5gabfjad"]
     answer = "def myfunc(e):\n    return e[4]\n question_list.sort(key=myfunc)"
     question_list = convert_list2str(question_list)
@@ -350,6 +350,90 @@ def question_38(student_exam):
     question_list = ""
     answer = "[i for i in range(1,1001) if i % 2 == 0] "
     return question, question_list, answer
+def question_39(student_exam):
+    question = "Write a program that ask the user to enter a number and display the prime factors ordered from smallest to largest."
+    question = question + "if the number entered by the user is less than 2 then there are no prime factors and the message 'no prime factors' should be displayed"
+    question = question + "The following algorithm can be used to discover the prime factors"
+    question = question + "intailize factor to 2\n"
+    question = question + "while factor is less than or equal to n do\n"
+    question = question + "if n is evenly divisible by factor then\n conclude that fator is a factor of n\n divide n by factor using floor division\n else increase factor by 1"
+    question = question + "for example Enter a number 36 the prime factor of 36 are 2,2,3,3\n"
+    question_list = ""
+    answer = "number = int(input('Enter a number'))\nfactor = 2\nvalue_org = value\flag = 0\nwhile factor <= (value_org // 2):\n    if value '%' factor == 0:\n        flag = 1\n        print(factor)\n        value = value / factor\n    else:\n        factor = factor + 1\n if flag == 0:\n    print('No prime factors')"
+    return question, question_list, answer
+def question_40(student_exam):
+    random_num = random.randint(20,100)
+    question = "could you please give the result of 1 * 2 * 3 ... {0}\n".format(random_num)
+    question_list = ""
+    answer = "result = 1\nfor i in range(1,{0})\n    result = result * i\nprint(result)\n".format(random_num)    
+    return question, question_list, answer
+def question_41(student_exam):
+    question = "We have a fomula like this 1 - 1/3 + 1/5 - 1/7 ..... = Pi/4. Pi is 3.1415926.... could you please make a coding for that fomular?\n"
+    question_list = ""
+    answer = "we do not have answer for it.."
+    return question, question_list, answer
+def question_42(student_exam):
+    question = "add all number from 1 to 1000 and then remove all number can be devided by 3 and append all number can be devided by 7 in the range of 1001 ~ 2000\n"
+    question_list = ""
+    answer = "a = [i for i in range(1,1001) if i % 3 != 0]\nb = [i for i in range(1001,2001) if i % 7 == 0]\na.extend(b)\n"
+    return question, question_list, answer
+def question_43(student_exam):
+    question = "Could you please save following dictionary to the txt file and also add youname:weight in that dictionary?\n"
+    question_list = "my_dict = {'Jack':'90kg','Lisa':'50kg'}\n"
+    answer = "import json\nmy_dict[{0}] = {1}\nwith open('my_dict.json','w') as fd\n    json.dump(my_dict,fd,indent=4)\n".format(student_exam.name,student_exam.weight)
+    return question, question_list, answer
+def question_44(student_exam):
+    question = "How to know the email format is correct in the following question list?"
+    question_list = "email = ['shwzh1990@gmail.abc', 'James&gmail.com','{}@gmail.com', 'Lisa1988@163.com']".format(student_exam.name)
+    answer = "for i in email:\n    if '@' in i and i.endswith('.com'):\n        print(i)"
+    return question, question_list, answer
+def question_45(student_exam):
+    question = "could you design a small project: \n Design a log in system allowing user to type user name and password, give them three times trail. \n"
+    question_list = ""
+    answer = "No answer will be given"
+    return question, question_list, answer
+def question_46(student_exam):
+    question = "Please remove all of the element can be divided by 2,3,4,5 in the following list\n"
+    question_list = "my_list = [i for i in range(2342,32455)]\n"
+    answer = "my_list = [i for i in range(2342,32455) if i % 2 != 0 and i % 3 != 0 and i % 4 != 0 and i  % 5 != 0]\n"
+    return question, question_list, answer
+def question_47(student_exam):
+    question = "could you please fetch out all of the number in the following list"
+    question_list = "my_str = '343my_limit43454my_limit45365my_limit45325423my_limit324351432my_limit5243523543my_limit653462564my_limit'\n"
+    answer = "my_str.split('my_limit')"
+    return question, question_list, answer
+def question_48(student_exam):
+    question = "Make a small project: could you please read out all the data in the question48.txt and then remove all of the odd number in the list and then save the data back to the question48.txt\n"
+    question_list = ""
+    my_list = [i for i in range(5434,random.randint(5434,10000))]
+    my_list = convert_list2str(my_list)
+    with open("question48.txt",'w',encoding='utf-8') as fd:
+        fd.writelines(my_list)
+    answer = "No answer will provide"
+    return question, question_list, answer
+def question_49(student_exam):
+    question = "Make a small project. Read out all the data from question49.json and then 1. delete all content under 1 keyword, 2. change value under the keyword 2 to 80. 3 please add 'my_name':{}\n and then save back to the question49.json\n".format(student_exam.name)
+    my_dict = {"1":"This is a boot","2":70}
+    with open("question49.txt",'w',encoding='utf-8') as fd:
+        json.dump(my_dict,fd,indent=4)
+    answer = "No answer will provide\n"
+    question_list = ""
+    return question, question_list, answer
+def question_50(student_exam):
+    question = "Make a small project. Read out all the data from question50.txt and then 1.append with the all odd number in range 1 ~ 100 2. remove all of the element which can be divide by 7, extend all value from (200~1000) and then save back to the question50.txt\n"
+    answer = "No answer will provide\n"
+    question_list = ""
+    return question, question_list, answer
+        
+
+
+
+
+
+
+
+
+
     
     
               
@@ -372,7 +456,8 @@ Questions = { \
                   question_30,  \
                   question_29, \
                   question_32, \
-                  question_36 \
+                  question_36, \
+                  question_40 \
    ], \
     "Intermediate": [ question_11, \
                      question_12, \
@@ -381,8 +466,12 @@ Questions = { \
                      question_8, \
                      question_21, \
                      question_22,\
+                     question_43,\
                      question_23, \
+                     question_45, \
+                     question_47, \
                      question_24, \
+                     question_42, \
                      question_35 ],\
     "Master": [ question_16, \
                  question_9, \
@@ -391,11 +480,15 @@ Questions = { \
                  question_20, \
                  question_25, \
                  question_26,  \
+                 question_48,  \
+                 question_50,  \
+                 question_46,  \
                  question_31, \
+                 question_44, \
+                 question_49, \
                  question_33, \
-                 question_34 \
-              ] \
-}
+                 question_34, \
+                 question_39  ] }
 
 
 level_dict = {"1":"Entry","2":"Intermediate","3":"Master"}    
@@ -420,11 +513,11 @@ if  __name__ == "__main__":
         student_gender = input ("please input your gender: ")
         student_weight = input ("please input your weight: ")
         student_exam = student_examination(student_name, student_gender,student_age,student_weight) 
-       # student_exam = student_examination('Jack', 'male',10,80)
         level = input("please select question level (type 1,2,3):\n\
         (1).Entry\n\
         (2).Intermediate\n\
         (3).Master\n")
+        level = "test"
         if level in level_dict:
             question_for_test = np.random.choice(Questions[level_dict[level]], size = Amount_of_question, replace = False)
             random.shuffle(question_for_test)
@@ -437,9 +530,7 @@ if  __name__ == "__main__":
             question_for_test = np.random.choice(all_question, size=Amount_of_question, replace=False)
             random.shuffle(question_for_test)
             break
-        else:
-            print("please type 1,2,3 to get your level")
+        else: print("please type 1,2,3 to get your level")
 
-        #student_exam = student_examination('Jack', 'male',10,80)
     generate_examination(student_exam, question_for_test)
     
