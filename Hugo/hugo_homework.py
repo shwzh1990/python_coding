@@ -21,6 +21,9 @@
 #                     Final_list.append(i)
 # print(Final_list)
 ##############################################
+# str = '343my_limit43454my_limit45365my_limit45325423my_limit324351432my_limit5243523543my_limit653462564my_limit'
+# print(str.replace("my_limit",""))
+###############################################
 # def sum_of_the_list(sum):
 #     total = 0
 #     for value in sum:
@@ -50,6 +53,3 @@
 #         numbers.append(i)
 # print(numbers)
 #############################################
-# str = '343my_limit43454my_limit45365my_limit45325423my_limit324351432my_limit5243523543my_limit653462564my_limit'
-# print(str.replace("my_limit",""))
-###############################################
