@@ -1,0 +1,80 @@
+1. data type:
+   integer: 1,2,3,4
+   float: 12.0,3.1,3.14159
+   string: "hello", "123", '1'
+
+8 / 4 = 2.0
+8 // 4 = 2
+4 // 3 = 1
+1 // 10 = 0
+
+"hello" + "World" => "helloWorld"
+"hello" + " " + "World" =>"hello World"
+2. structure type:
+list: school bag [XXXX,XXX] => [123,"i am jack", 1.9]
+list.append(XXX)
+list.pop() => remove the last value in the list
+list.pop(2) => remove list[2]
+list.remove(value) remove the value which is first time occurance in the list
+my_list = [1,2,3,4,5,6,7]
+           0 1 2 3 4 5 6
+my_list[1]
+index is from 0 to len(mylist) - 1 
+
+how to sum all value in the list?
+sum(my_list)
+
+
+dict:
+{"key":value}
+
+my_dict = {"key1":{"key2":[1,2,3,5]}}
+
+my_dict["key1"]
+
+set: list but no duplicate element
+
+my_set = {1,3,4}
+tuple: read only list. (1,2,3,4)
+
+3. gramma:
+for XXX in XXXXX: for each element including in XXXXXX do something
+
+for i in [1,2,3,4,5,6]
+
+for i in [34,5432,623,4,324,356,32,4,6,243,3,645]
+
+for i in range(1,100) => i (1~99)
+
+how to write an elegant code with list and for loop
+
+my_list = [i for i in range(1,101)]
+
+my_list = [i for i in range(1,101) if i % 7 == 0]
+
+for XXX in XXXXX:
+    XXXXXXX
+
+while XXXX:
+     XXXXXX
+
+if XXXXX:
+    XXXXXXXX
+elif XXXXX:
+    XXXXXX
+
+print(XXXX)
+result = input("XXXXX")
+result => string
+
+if my_string == other_string:
+
+if XXX not in XXXXX:
+
+if xxx in XXX:
+
+practice:
+use input to simulate a password system allowing user having three times trial.
+if user give correct password in three times then print success
+else print(failed)
+
