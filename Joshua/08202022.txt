@@ -1,0 +1,34 @@
+1. int, float, str
+2. list: append pop remove
+3. my_str = "1$4$5$6$" my_list = my_str.split("$")
+4. my_str = "Hello", your_str = "world" my_str + your_str
+5. my_str.startswith  endswith
+6. for XXX in XXXXX:
+7. while XX:
+8. [i for i in XXX]
+9. if XXX:
+      XXXXXX
+   elif XXXX:
+      XXX
+   else:
+       XX
+10. [i for i in XXXX if XXXXX] [i for i in range(1,101) if i % 2 == 0]
+11. function
+
+((a + b - c) / (r * u)) - 94345
+
+def  XXXXX():
+    XXXXXXX
+
+def XXXX(a):
+    a = a + 1
+
+def XXX(a = XXX,b)
+    XXXXX
+
+def XXXX(a,b):
+    XXXXXXX
+    return XXXX
+
+def xxxx(*k):
+    dfadfafdasfefefda
