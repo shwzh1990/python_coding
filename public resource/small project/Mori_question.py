@@ -3,12 +3,9 @@ import numpy as np
 import random
 import os 
 questions_amount = 5
-
-
 def level():
     num = input("please select different level: \n 1.Easy \n 2.Intermetiate\n 3.Hard\n 4.Random\n")
-    return num;
-
+    return num
 def Selection_func():
     count = 0
     current_question_num = 1
@@ -19,7 +16,6 @@ def Selection_func():
         if num not in data.keys() and num != '4':
             print("please type the number in [1-4]")
             continue
-
         question_dict = {}
         if num != '4':
             questions_list = np.random.choice([key for key in data[num].keys()], questions_amount, replace=False)
@@ -28,7 +24,6 @@ def Selection_func():
             for key in data.keys():
                 question_total.extend(list(data[key].keys()))
             questions_list = np.random.choice(question_total, questions_amount, replace=False)
-            
         for question_key in questions_list:
             if num != '4':
                 question_dict[question_key] = data[num][question_key]
@@ -36,14 +31,12 @@ def Selection_func():
                 for a in data.keys():
                     if question_key in data[a].keys():
                           question_dict[question_key] = data[a][question_key]
-                    
         for question in question_dict.keys():
             answer_list = [question_dict[question]]
             if num != '4':
                 answer_list.extend( np.random.choice( [fake_answer for fake_answer in data[num].values() if fake_answer != question_dict[question]], 3, replace=False)  )
             else:
                 answer_list.extend( np.random.choice( [fake_answer for fake_answer in data[str(random.randint(1,3))].values() if fake_answer != question_dict[question]], 3, replace=False)  )
-                
             random.shuffle(answer_list)
             map_dict = {"A":answer_list[0], "B":answer_list[1], "C":answer_list[2],"D":answer_list[3]}
             answer = input("Question{}.{}\n".format(current_question_num,question)+"    A.{}\n    B.{}\n    C.{}\n    D.{}\n".format(answer_list[0],answer_list[1],answer_list[2],answer_list[3])+"please input the answer:")
@@ -60,10 +53,7 @@ def Selection_func():
             current_question_num = current_question_num + 1
         print("The test is Done! \n The finnal result is {}".format(count))
         count = 0
-        break;
-
-
-                          
+        break
 def Word_Answer():
     count = 0          
     current_question_num = 1
@@ -98,10 +88,6 @@ def Word_Answer():
             current_question_num  = current_question_num + 1
         print("Your final score is {}".format(count))
         break
-        
-            
-                   
-
 def Add_vocabulary():
     with open("Mori_Dictionary.json", 'r', encoding="utf-8") as fd:
         data = json.load(fd)
@@ -112,22 +98,16 @@ def Add_vocabulary():
            with open("Mori_Dictionary.json", "w", encoding="utf-8") as fd:
                json.dump(data, fd, indent=4)
                break
-        value = input("please input your English meanning:")
-        level = input("Which level do you want to set?\n1.Easy\n2.Intermediate\n3.Hard\n");
+        value = input("please input your English meaning:")
+        level = input("Which level do you want to set?\n1.Easy\n2.Intermediate\n3.Hard\n")
         if int(level) not in [i for i in range(1,4)]:
             print("please select the level from [1 - 3]")
             continue
         data[level][key] = value
-
 question_type ={"1": Selection_func, "2": Word_Answer, "3":Add_vocabulary}
 def menu():
     print("Welcome to our Te Reo Maori Test!\n") 
     type_num = input("please input which question type you want:\n1.MultiSelection\n2.Word Answer\n3.Add Vocabulary\n")
     os.system("cls") 
     question_type[type_num]()
-
 menu()
-
-          
-    
-    

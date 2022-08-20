@@ -1,0 +1,1 @@
+Hugo@age:11@gender:male@weight:30
