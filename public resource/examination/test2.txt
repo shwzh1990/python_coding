@@ -1,1 +1,0 @@
-{"hugo": {"gender": "male", "age": 5, "weight": 18}}
