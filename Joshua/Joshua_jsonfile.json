@@ -1,0 +1,10 @@
+{
+    "0001": {
+        "Name": "Joshua",
+        "Age": 10,
+        "Gender": "Male",
+        "Chinese": 89,
+        "English": 100,
+        "Math": 100
+    }
+}

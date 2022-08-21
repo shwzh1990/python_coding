@@ -18,6 +18,27 @@ del dictionary
     dictionary.values() or use for loop
 (2). if you want to get the key inside the dictionary:
      dictionary.keys() or for key in dictionary.keys()
-(3). if youn want to get both:
+(3). if you want to get both:
       for key, value in new_dict.items():
+
+
+"0001":{"Name":"Joshua", "Age": 10,"Gender":"Male","Chinese":89,"English":100, "Math":100}
+1. How can i modify the student data?
+my_dict['0001']["Age"] = 11
+2. how can you add a new student?
+(1)my_dict["0002"] = {}
+(2)my_dict["0002"]["Name"] = "Tom"
+3. how to delete the student?
+my_dict.pop(key)
+del my_dict[key]
+4. how can you save student data to the disk?
+    my_dict = {"0001":{"Name":"Joshua", "Age": 10,"Gender":"Male","Chinese":89,"English":100, "Math":100}}
+
+    with open("Joshua_jsonfile.json",'w') as fd:
+        json.dump(my_dict, fd, indent=4)
+
+try to re-build the student transcript management by using the dictionary knowedge taught above..
+
+
+
 

@@ -14,3 +14,8 @@ with open("Joshua_jsonfile.txt", "r") as fd:
     student_info = json.loads(student_info)
     student_info["name"] = "Jack"
     print(student_info)
+
+my_dict = {"0001":{"Name":"Joshua", "Age": 10,"Gender":"Male","Chinese":89,"English":100, "Math":100}}
+
+with open("Joshua_jsonfile.json",'w') as fd:
+    json.dump(my_dict, fd, indent=4)
