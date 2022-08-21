@@ -1,25 +1,22 @@
 import re
 import random
-
 with open("pakistan_all.txt", 'r', encoding='utf-8') as fd:
     data = fd.read()
 a = re.findall(r"Document A........................", data, re.M)
 a = re.split(r"Document A........................", data)
 a.pop()
 f = len(a)
-
 new_article = []
 for articles in a:
     articles = articles.strip("\n")
     articles = articles.strip()
     new_article.append(articles)
 del a
-
 def func(e):
     date_list = []
     article_list = e.split("\n")
     for a,content in enumerate(article_list):
-        if word in content:
+        if "word" in content:
             date_list.append(article_list[a+1])
             break
     Months = {"January":0,"February":31,"March":31 + 28,"April":31 + 28 + 31,"May":31 + 28 + 31 + 30,"June":31 + 28 + 31 + 30 + 31, "July":31 + 28 + 31 + 30 + 31 + 30, "August":31 + 28 + 31 + 30 + 31 + 30 + 31, "September":31 + 28 + 31 + 30 + 31 + 30 + 31 + 31, "October":31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30,"November":31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31, "December":31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30}
