@@ -1,0 +1,13 @@
+my_str = '501%572%35%750%243%34%757%488%570%310%94%360%362%615%505%13%525%14%864%953%97'
+'''
+step 1 use split function to split the string into a my_list
+'''
+my_list = my_str.split("%")
+'''
+step 2 convert each element from str to integer
+'''
+my_list = [int(i) for i in my_list if int(i) % 2 == 0]
+print(my_list)
+
+
+
