@@ -1,0 +1,38 @@
+Dictionary format:
+{ Key : value}
+
+keys: string
+value: Any
+
+
+key must be unique!
+
+1. how to make a empty Dict
+a = {}
+2. how to add value into the Dict?
+a[key] = value
+3. how to modify a dict value
+a[key] = value
+4. how to remove a dict element
+del a[key]
+5. how to iterate dict?
+   (1)for val in a.values():  => for val in [10,11,12]
+          print(val)
+   (2) for key in a.keys():
+           print(key)
+   (3)for key,val in a.items():
+           a[key] = val + 1
+      
+
+{
+   "1234":
+         {
+            "name":"Charles",
+            "Gender" : "Male"
+            "Chinese":100,
+            "English" : 95,
+            "Math" : 60
+           
+         }
+
+}

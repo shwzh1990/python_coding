@@ -1,0 +1,1 @@
+{"1234": {"name": "Charles", "Gender": "Male", "Chinese": 69, "English": 95, "Math": 60}}
